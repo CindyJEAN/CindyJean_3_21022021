@@ -19,9 +19,7 @@ function makeCss(){
 
 function makePage(){
   return gulp.src("./src/pages/*.html")
-    .pipe(ejs({
-        msg: "Hello Gulp!"
-    }))
+    .pipe(ejs())
     .pipe(gulp.dest("./www"));
 }
 
