@@ -8,11 +8,15 @@ var ejs = require("gulp-ejs")
 sass.compiler = require('node-sass');
 var concat = require('gulp-concat');
 const cleanCSS = require('gulp-clean-css');
+const autoprefixer = require('gulp-autoprefixer');
 
 function makeCss(){
   return gulp.src('./src/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(concat('style.css'))
+    .pipe(autoprefixer({
+      cascade: false
+    }))
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('./www/css'));
 }

@@ -1,3 +1,36 @@
+@import "../head/base.scss";
+
 footer{
-  background-color: darkcyan;
+  background-color: $color-bgDark;
+  color: #fff;
+  padding : 1.5rem;
+  h1 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 1.1rem;
+    letter-spacing: .5px;
+    font-weight: 400;
+    margin: 0;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    list-style-type: none;
+    padding-inline-start: 0;
+  }
+  
+}
+
+//2 icones avant les éléments de la liste
+.li__icon {
+  &::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: bold;
+  }
+  &--food::before {
+    content: "\f2e7";
+  }
+  &--hands::before {
+    content: "\f4c4";
+  }
 }

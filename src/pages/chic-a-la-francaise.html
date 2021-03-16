@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-  <%- include("../partials/head/head.html", {"titre" :  "chic à la Française"}); %>
+  <%- include("../partials/head/head.html", {"titre" : "chic à la Française"}); %>
   </head>
-  <h1>Menu</h1>
-  :)
+  <h1><%- include ('../partials/button/button.html', {"texte" : "Commander" }); %></h1>
+
+
 
   <%- include('../partials/footer/footer.html'); %>
 </body>

@@ -6,14 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>index</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>hello world</h1>
+  <header>
+    <nav>
+      <img src="../www/logo/ohmyfood.svg" alt="Logo" />
+    </nav>
+  </header>
+
+  <main>
+  <%- include('../partials/button/button.html', {"texte" : "Explorer nos restaurants" }); %>
+
   <section>
     <%- include('../partials/restaurant/restaurant.html', {"nom" : "Chic à la Francaise" }); %>
     <%- include('../partials/restaurant/restaurant.html', {"nom" : "La palette du gout" }); %>
-
+    
   </section>
+  
+
+  </main>
   <%- include('../partials/footer/footer.html'); %>
 </body>
 </html>
