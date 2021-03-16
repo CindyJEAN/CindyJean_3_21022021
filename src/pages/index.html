@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>index</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <%- include('../partials/head/head.html', {"titre" : "accueil" }); %>
 </head>
 <body>
   <header>
     <nav>
-      <img src="../www/logo/ohmyfood.svg" alt="Logo" />
+      <img src="/logo/ohmyfood.svg" alt="Logo" />
     </nav>
+    <p>Paris, Belleville</p>
   </header>
 
   <main>
-  <%- include('../partials/button/button.html', {"texte" : "Explorer nos restaurants" }); %>
+    <section class="align-center bg-grey">
+      <h1>Réservez le menu qui vous convient</h1>
+      <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+      <%- include('../partials/button/button.html', {"texte" : "Explorer nos restaurants" }); %>
+    </section>
 
-  <section>
-    <%- include('../partials/restaurant/restaurant.html', {"nom" : "Chic à la Francaise" }); %>
-    <%- include('../partials/restaurant/restaurant.html', {"nom" : "La palette du gout" }); %>
-    
-  </section>
+    <section>
+      <h1>Fonctionnement</h1>
+      <ol>
+        <li>Choisissez un restaurant</li>
+        <li>Composez votre menu</li>
+        <li>Dégustez au restaurant</li>
+      </ol>
+    </section>
+
+    <section class="bg-grey">
+      <%- include('../partials/restaurant/restaurant.html', {
+        "nom" : "Chic à la Francaise",
+        "url" : "chic-a-la-francaise.html"
+      }); %>
+      <%- include('../partials/restaurant/restaurant.html', {
+        "nom" : "La palette du gout",
+        "url" : "la-palette-du-gout.html"
+      }); %>
+      
+    </section>
   
 
   </main>

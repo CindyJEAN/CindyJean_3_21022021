@@ -1,10 +1,8 @@
-@import "../head/base.scss";
-
 footer{
   background-color: $color-bgDark;
   color: #fff;
   padding : 1.5rem;
-  h1 {
+  h2 {
     font-family: 'Shrikhand', cursive;
     font-size: 1.1rem;
     letter-spacing: .5px;
@@ -18,19 +16,25 @@ footer{
     list-style-type: none;
     padding-inline-start: 0;
   }
-  
-}
+  li{
+    font-size: 1rem;
+    display: flex;
+    &::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: bold;
+      font-size: .8rem;
+      width: 1.3rem;
+      display: flex;
+      align-items: center;
+    }
+    &.food::before {
+      content: "\f2e7";
+    }
+    &.hands::before {
+      content: "\f4c4";
+    }
 
-//2 icones avant les éléments de la liste
-.li__icon {
-  &::before {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: bold;
   }
-  &--food::before {
-    content: "\f2e7";
-  }
-  &--hands::before {
-    content: "\f4c4";
-  }
+
+  
 }
