@@ -37,6 +37,13 @@ header {
         align-items: center;
         justify-content: center;
         background-color: $color-bgMedium;
+        font-weight: 500;
+        &::before {
+            font-family: 'Font Awesome 5 Free';
+            content: "\f3c5";
+            width: 1.5rem;
+            font-weight: bold;
+        }
     }
 }
 
@@ -45,16 +52,46 @@ main {
     section {
         display: flex;
         flex-direction: column;
+        row-gap: 15px;
         margin: auto;
-        padding: 1rem;
-        p {
-            font-size: 1.2rem;
-            font-weight: 300;
+        padding: 3rem 1.5rem;   
+        &.bg-grey {
+            background-color: $color-bgLight;
         }
-    &.bg-grey {
-        background-color: $color-bgLight;
     }
+    p {
+        font-size: 1.2rem;
+        font-weight: 300;
+        margin: 0;
     }
+    h1 {
+        margin: 0;
+    }
+    ol {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        li {
+            background-color: $color-bgLight;
+            height: 50px;
+            &::before {
+                font-family: 'Font Awesome 5 Free';
+                font-weight: bold;
+                color: grey;
+            }
+            &:first-of-type::before {
+                content : "\f3cd";
+            }
+            &:nth-of-type(2)::before {
+                content : "\f03a";
+            }
+            &:nth-of-type(3)::before {
+                content : "\f54e";
+            }    
+        }
+    }
+    
+    
 }
 
 .align-center { 
