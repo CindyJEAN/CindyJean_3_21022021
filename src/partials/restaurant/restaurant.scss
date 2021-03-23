@@ -1,4 +1,30 @@
 article.restaurant{
     font-size: 1rem;
     font-weight: bold;
+    background-color: #fff;
+    border-radius: 15px;
+    display: grid;
+    align-items: center;
+    height: 250px;
+    @include box-shadow(1px);
+    img {
+        width: 100%;
+        max-width: 400px;
+        height: 170px;
+        object-fit: cover;
+        object-position: 50% 60%;
+        align-self: flex-start;
+        border-radius: 15px 15px 0 0;
+        padding-bottom: 10px;
+    }
+    a {
+        h2 {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+    }
+    p {
+        font-size: 1rem;
+        padding-bottom: 15px;
+    }
 }

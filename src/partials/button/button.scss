@@ -11,10 +11,10 @@
     background: linear-gradient(170deg, $color-secondary, $color-primary);
     font-size: 1rem;
 
-    @include box-shadow($opacity);
+    @include box-shadow();
     &:hover {
         background: linear-gradient(170deg, lighten($color-secondary, 10%), lighten($color-primary, 10%));
-        @include box-shadow(.6);
+        @include box-shadow($vertical-base, .6);
     }
     &:focus {
         outline: none;

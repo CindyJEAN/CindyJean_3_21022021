@@ -4,10 +4,16 @@ $color-tertiaty: #99E2D0;
 $color-bgLight: #f6f6f6;//Gris clair pour les sections
 $color-bgMedium: #eaeaea; //Gris foncé localisation
 $color-bgDark: #353535;//Gris du footer
-$opacity: .2; //opacité pour le boxshadow (foncer pour le hover)
+$opacity-base: .2; //opacité pour le boxshadow (foncer pour le hover)
+$vertical-base: 0; //axe vertical pour le boxshadow
 
-@mixin box-shadow($opacity) {
-    box-shadow: 0px 5px 8px 0px rgba(0,0,0,$opacity);
+@mixin box-shadow($vertical: $vertical-base, $opacity: $opacity-base) {
+    box-shadow: $vertical 5px 8px 0px rgba(0,0,0,$opacity);
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
 }
 
 body {
@@ -24,7 +30,7 @@ header {
             ". logo .";
         justify-items: center;
         align-items: center;
-        @include box-shadow($opacity);
+        @include box-shadow();
         img {
             grid-area: logo;
         }
@@ -71,9 +77,21 @@ main {
         display: flex;
         flex-direction: column;
         row-gap: 15px;
+        list-style-position: inside;
+        padding-inline-start: 0;
         li {
             background-color: $color-bgLight;
             height: 50px;
+            display: block-flex;
+            align-content: center;
+            &::marker {
+                content: counter(list-item); //permet de retirer le point après la numérotation
+                background-color: $color-primary;
+                display: flex;
+                width: 1rem;
+                height: 1rem;
+                border: solid red;
+            }
             &::before {
                 font-family: 'Font Awesome 5 Free';
                 font-weight: bold;
@@ -89,6 +107,7 @@ main {
                 content : "\f54e";
             }    
         }
+    
     }
     
     
@@ -96,4 +115,8 @@ main {
 
 .align-center { 
     text-align: center;
+}
+
+.left-pad {
+    padding-left: 15px;
 }
