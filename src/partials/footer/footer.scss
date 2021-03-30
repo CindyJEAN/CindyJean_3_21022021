@@ -2,6 +2,7 @@ footer{
   background-color: $color-bgDark;
   color: #fff;
   padding : 1.5rem;
+  
   h2 {
     font-family: 'Shrikhand', cursive;
     font-size: 1.1rem;
@@ -9,6 +10,7 @@ footer{
     font-weight: 400;
     margin: 0;
   }
+
   ul {
     display: flex;
     flex-direction: column;
@@ -16,6 +18,7 @@ footer{
     list-style-type: none;
     padding-inline-start: 0;
   }
+
   li{
     font-size: 1rem;
     display: flex;

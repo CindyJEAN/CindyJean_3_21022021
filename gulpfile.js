@@ -11,7 +11,7 @@ const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 
 function makeCss(){
-  return gulp.src(['./src/partials/base.scss','./src/partials/*/*.scss'])
+  return gulp.src(['./src/partials/base.scss','./src/**/*.scss'])
     .pipe(concat('style.css'))
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({

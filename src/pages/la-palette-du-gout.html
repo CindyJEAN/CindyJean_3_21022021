@@ -2,11 +2,18 @@
 <html lang="fr">
 
 <head>
-  <%- include('../partials/head/head.html', {"titre":"la palette du gout"}); %>
+  <%- include('../partials/head/head.html', {"titre" : "la palette du gout"}); %>
 </head>
 
-<body>
-  <h1>Menu</h1>
+<body class="menu">
+  <%- include('../partials/header/header.html', {"back" : true }); %>
+  
+  <img src="../restaurants/laPaletteDuGout.jpg" />
+  
+  <h1>À la française</h1>
+  
+  <%- include ('../partials/button/button.html', {"texte" : "Commander" }); %>
+  
 
   <%- include('../partials/footer/footer.html'); %>
 </body>

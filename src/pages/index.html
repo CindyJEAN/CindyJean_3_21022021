@@ -3,13 +3,8 @@
 <head>
   <%- include('../partials/head/head.html', {"titre" : "accueil" }); %>
 </head>
-<body>
-  <header>
-    <nav>
-      <img src="/logo/ohmyfood.svg" alt="Logo" />
-    </nav>
-    <p>Paris, Belleville</p>
-  </header>
+<body class="index">
+  <%- include('../partials/header/header.html', {"back" : false }); %>
 
   <main>
     <section class="align-center bg-grey">
@@ -20,11 +15,11 @@
 
     <section>
       <h1>Fonctionnement</h1>
-      <ol>
-        <li>Choisissez un restaurant</li>
-        <li>Composez votre menu</li>
-        <li>Dégustez au restaurant</li>
-      </ol>
+      <ul>
+        <li><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
+        <li><i class="fas fa-list"></i>Composez votre menu</li>
+        <li><i class="fas fa-store"></i>Dégustez au restaurant</li>
+      </ul>
     </section>
 
     <section class="bg-grey">
@@ -33,29 +28,33 @@
         "url_image" : "laPaletteDuGout.jpg",
         "alt_image" : "Restaurant La palette du goût",
         "nom" : "La palette du goût",
-        "url" : "la-palette-du-gout.html",
+        <!-- "url" : "la-palette-du-gout.html", -->
         "lieu" : "Ménilmontant",
+        <!-- "new" : true -->
       }); %>
       <%- include('../partials/restaurant/restaurant.html', {
         "url_image" : "laNoteEnchantee.jpg",
         "alt_image" : "Restaurant La note enchantée",
         "nom" : "La note enchantée",
-        "url" : "la-note-enchantee.html",
+        <!-- "url" : "la-note-enchantee.html", -->
         "lieu" : "Charonne",
+        <!-- "new" : true -->
       }); %>
       <%- include('../partials/restaurant/restaurant.html', {
         "url_image" : "chicALaFrancaise.jpg",
         "alt_image" : "Restaurant Chic à la Française",
         "nom" : "À la Francaise",
-        "url" : "chic-a-la-francaise.html",
+        <!-- "url" : "chic-a-la-francaise.html", -->
         "lieu" : "Cité Rouge",
+        <!-- "new" : true -->
       }); %>
       <%- include('../partials/restaurant/restaurant.html', {
         "url_image" : "leDeliceDesSens.jpg",
         "alt_image" : "Restaurant Le délice des sens",
         "nom" : "Le délice des sens",
-        "url" : "le-delice-des-sens.html",
+        <!-- "url" : "le-delice-des-sens.html", -->
         "lieu" : "Folie-Méricourt",
+        <!-- "new" : true -->
       }); %>
       
     </section>

@@ -1,0 +1,94 @@
+.index {
+    main {
+        p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin: 0;
+        }    
+    }
+    
+    section {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        margin: auto;
+        padding: 3rem 1.5rem;
+    
+        &.bg-grey {
+            background-color: $color-bgLight;
+        }
+    
+        &.fonctionnement {
+            row-gap: 20px;
+        }
+        
+        h1 {
+            margin: 0;
+        }
+        
+        ul {
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+            list-style-position: inside;
+            list-style-type: none;
+            padding-inline-start: 0;
+        }
+        
+        li {
+            background-color: $color-bgLight;
+            box-shadow: 1px 5px 12px 0px rgba(0,0,0,.15);
+            border-radius: 20px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            margin-bottom: 10px;
+            margin-left: 12px;
+    
+            @for $i from 1 through 3{
+                &:nth-of-type(#{$i})::before{
+                    content: "#{$i}";
+                }
+            }
+    
+            &::before {
+                background-color: $color-primary;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 1.5rem;
+                height: 1.5rem;
+                color: #fff;
+                font-weight: 400;
+                font-size: .8rem;
+                z-index: 1;
+                margin-left: -12px;
+            }
+    
+            i {
+                color: grey;
+                font-size: 1.2rem;
+                margin: auto 25px auto 25px;
+            }
+            // &::before {
+            //     font-family: 'Font Awesome 5 Free';
+            //     font-weight: bold;
+            //     color: grey;
+            // }
+            // &:first-of-type::before {
+            //     content : "\f3cd";
+            // }
+            // &:nth-of-type(2)::before {
+            //     content : "\f03a";
+            // }
+            // &:nth-of-type(3)::before {
+            //     content : "\f54e";
+            // }    
+        }
+    }
+       
+    
+
+}

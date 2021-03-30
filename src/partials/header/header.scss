@@ -1,0 +1,46 @@
+header {      
+    background-color:  $color-bgMedium;
+
+    nav {
+        background-color: white;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        grid-template-rows: 75px;
+        grid-template-areas: 
+            "arrow logo .";
+        justify-items: center;
+        align-items: center;
+        box-shadow: 0 2px 2px 0px rgba(0,0,0,.15);
+
+        img {
+            grid-area: logo;
+        }
+
+        a{
+            grid-area: arrow;
+            &::before {
+                content: "\f060";
+                font-family: 'Font Awesome 5 Free';
+                font-weight: bold;
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    p {
+        display: flex;
+        margin: 0;
+        width: 100vw;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+
+        &::before {
+            font-family: 'Font Awesome 5 Free';
+            content: "\f3c5";
+            width: 1.5rem;
+            font-weight: bold;
+        }
+    }
+}
