@@ -4,9 +4,16 @@ article.restaurant{
     background-color: #fff;
     border-radius: 15px;
     display: grid;
+    grid-template-areas: 
+        "photo nouveau"
+        "titre coeur"
+        "adresse coeur";
+    grid-template-columns: auto 100px;
+    grid-template-rows: 170px 35px 30px;
     align-items: center;
     height: 250px;
     box-shadow: 1px 5px 12px 0px rgba(0,0,0,.10);
+    
 
     img {
         width: 100%;
@@ -14,21 +21,51 @@ article.restaurant{
         height: 170px;
         object-fit: cover;
         object-position: 50% 60%;
-        align-self: flex-start;
+        // align-self: flex-start;
         border-radius: 15px 15px 0 0;
-        padding-bottom: 10px;
+        // padding-bottom: 10px;
+        // grid-area: photo;
+        grid-column-start: photo;
+        grid-column-end: nouveau;
+        grid-row: 1 / 2;
     }
 
-    a {
-        h2 {
-            font-size: 1.2rem;
-            margin: 0;
-        }
+    h2 {
+        font-size: 1.2rem;
+        margin: 0;
+        grid-area: titre;
+        align-self: flex-end;
     }
 
-    p {
-        font-size: 1rem;
-        padding-bottom: 15px;
+    address {
+        // padding-bottom: 15px;
+        grid-area: adresse;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1.05rem;
     }
 
+    i{
+        grid-area: coeur;
+    }
+
+    &.nouveau::after {
+        content: "Nouveau";
+        font-size: .9rem;
+        color: darken($color-tertiary, 50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: start;
+        justify-self: end;
+        margin: 12px;
+        height: 30px;
+        width: 80px;
+        background-color: $color-tertiary;
+        border-radius: 3px;
+        // padding: 1rem;
+        // top: -5rem;
+        // left: 13rem;
+        grid-area: nouveau;
+    }
 }

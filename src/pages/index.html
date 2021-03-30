@@ -24,39 +24,35 @@
 
     <section class="bg-grey">
       <h1>Restaurants</h1>
-      <%- include('../partials/restaurant/restaurant.html', {
-        "url_image" : "laPaletteDuGout.jpg",
-        "alt_image" : "Restaurant La palette du goût",
+      <%- include("../partials/restaurant/restaurant.html", {
+        "url" : "la-palette-du-gout",
+        "altImage" : "Restaurant La palette du goût",
         "nom" : "La palette du goût",
-        <!-- "url" : "la-palette-du-gout.html", -->
         "lieu" : "Ménilmontant",
-        <!-- "new" : true -->
+        "nouveau" : "nouveau"
       }); %>
+  
       <%- include('../partials/restaurant/restaurant.html', {
-        "url_image" : "laNoteEnchantee.jpg",
-        "alt_image" : "Restaurant La note enchantée",
+        "altImage" : "Restaurant La note enchantée",
         "nom" : "La note enchantée",
-        <!-- "url" : "la-note-enchantee.html", -->
+        "url" : "la-note-enchantee",
         "lieu" : "Charonne",
-        <!-- "new" : true -->
+        "nouveau" : "nouveau"
       }); %>
       <%- include('../partials/restaurant/restaurant.html', {
-        "url_image" : "chicALaFrancaise.jpg",
-        "alt_image" : "Restaurant Chic à la Française",
+        "altImage" : "Restaurant Chic à la Française",
         "nom" : "À la Francaise",
-        <!-- "url" : "chic-a-la-francaise.html", -->
+        "url" : "chic-a-la-francaise",
         "lieu" : "Cité Rouge",
-        <!-- "new" : true -->
+        "nouveau" : ""
       }); %>
       <%- include('../partials/restaurant/restaurant.html', {
-        "url_image" : "leDeliceDesSens.jpg",
-        "alt_image" : "Restaurant Le délice des sens",
+        "altImage" : "Restaurant Le délice des sens",
         "nom" : "Le délice des sens",
-        <!-- "url" : "le-delice-des-sens.html", -->
+        "url" : "le-delice-des-sens",
         "lieu" : "Folie-Méricourt",
-        <!-- "new" : true -->
+        "nouveau" : ""
       }); %>
-      
     </section>
   
 
