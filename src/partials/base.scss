@@ -29,10 +29,47 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.align-center { 
+.alignCenter { 
     text-align: center;
 }
 
-.left-pad {
+.leftPad {
     padding-left: 15px;
+}
+
+// .heart {
+//     display: inline-block;
+//     height: 30px;
+//     margin: 0 10px;
+//     position: relative;
+//     top: 0;
+//     transform: rotate(-45deg);
+//     width: 30px;
+
+//     &::before {
+//         top: -15px;
+//         left: 0;
+
+//         content: "";
+//         border-radius: 50%;
+//         height: 30px;
+//         position: absolute;
+//         width: 30px;
+//     }
+
+//     &::after {
+//         left: 15px;
+//         top: 0;
+
+//         content: "";
+//         border-radius: 50%;
+//         height: 30px;
+//         position: absolute;
+//         width: 30px;
+//     }
+// }
+
+ul {   
+    list-style-type: none;
+    padding-inline-start: 0;
 }

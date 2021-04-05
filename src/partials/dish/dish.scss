@@ -1,0 +1,27 @@
+li.dish {
+    background-color: #fff;
+    display: grid;
+    grid-template-areas: 
+        "plat plat"
+        "accompagnement prix";
+        height: 70px;
+    border-radius: 15px;
+    box-shadow: 1px 5px 12px 0px rgba(0,0,0,.10);
+
+    p {
+        margin: 0;
+        &:first-of-type {
+            grid-area: plat;
+            font-weight: bold;
+            font-size: 1.1rem;
+            align-self: flex-end;
+            padding-bottom: 5px;
+        }
+
+        &:nth-of-type(2) {
+            grid-area: accompagnement;
+            font-size: 1rem;
+        }
+    }
+    
+}

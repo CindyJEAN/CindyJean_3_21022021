@@ -1,5 +1,47 @@
 .menu {
+    display: flex;
+    flex-direction: column;
+
     h1 {
-        color: black;
+        font-family: 'Shrikhand', cursive;
+        font-size: 1.8rem;
+        font-weight: 400;
+        margin: 0;
     }
+
+    img.hero {
+        height: 300px;
+        width: 100%;
+        max-width: 425px;
+        object-fit: cover;
+        object-position: 50% 60%;
+        z-index: 1;
+    }
+
+    section.carte {
+        padding: 2rem 1rem;
+        display: flex;     
+        flex-direction: column;   
+        z-index: 900;
+        background-color: $color-bgLight;
+        margin-top: -80px;
+        border-radius: 40px 40px 0 0;
+
+        h2 {
+            display: flex;
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 1rem;
+    
+            &::before {
+                content: "";
+                width: 40px;
+                height: 3px;
+                background-color: $color-tertiary;
+                margin-right: -40px;
+                margin-top: 24px;
+            }
+        }
+    }
+
 }

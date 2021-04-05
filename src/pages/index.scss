@@ -31,8 +31,6 @@
             flex-direction: column;
             row-gap: 15px;
             list-style-position: inside;
-            list-style-type: none;
-            padding-inline-start: 0;
         }
         
         li {
@@ -65,6 +63,14 @@
                 font-size: .8rem;
                 z-index: 1;
                 margin-left: -12px;
+            }
+
+            &:last-of-type {
+                background-color: lighten($color-primary, 35%);
+
+                i {
+                    color: $color-primary;
+                }
             }
     
             i {
