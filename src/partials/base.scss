@@ -4,13 +4,6 @@ $color-tertiary: #99E2D0;
 $color-bgLight: #f6f6f6;//Gris clair pour les sections
 $color-bgMedium: #eaeaea; //Gris foncé localisation
 $color-bgDark: #353535;//Gris du footer
-// $vertical: 0; //axe vertical pour le boxshadow
-// $opacity-base: .2; //opacité pour le boxshadow (foncer pour le hover)
-
-
-// @mixin box-shadow($shadow-x: $shadow-x-base, $opacity: $opacity-base) {
-//     box-shadow: $vertical 5px 8px 0px rgba(0,0,0,$opacity);
-// }
 
 a {
     &:link {
@@ -43,30 +36,32 @@ ul {
     padding-inline-start: 0;
 }
 
-article.restaurant i{
+i.heart {
     display: flex;
-    width: 100%;
-    height: 100%;
+    width: 50px;
+    height: 50px;
+    font-weight: normal;
+    font-size: 1.8rem;   
     align-items: center;
     justify-content: center;
 
-    &:hover{
+    &:hover {
         font-weight: bold;
-        background: -webkit-linear-gradient($color-primary, white);
+        background: -webkit-linear-gradient($color-primary, $color-secondary 50%, white 60%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        background-position-y: 7.5rem;
-        animation: remplissage 1s forwards;
+        background-position-y: 1.8rem;
+        animation: gradient 1s ease forwards;
     }
 }
 
 
-@keyframes remplissage {
+@keyframes gradient {
     from {
-        background-position-y: 7.5rem;
+        background-position-y: 1.8rem;
     }
     to{
-        background-position-y: 5.5rem;
+        background-position-y: 0.7rem;
     }
     
 }

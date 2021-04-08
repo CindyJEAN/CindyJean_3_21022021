@@ -45,8 +45,9 @@ article.restaurant{
         font-size: 1.05rem;
     }
 
-    i{
+    i.heart {
         grid-area: coeur;
+        justify-self: center;
     }
 
     &.nouveau::after {

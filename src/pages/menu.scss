@@ -7,7 +7,11 @@
         font-size: 1.8rem;
         font-weight: 400;
         margin: 0;
+        display: flex;
+        justify-content: space-between;
     }
+
+    
 
     img.hero {
         height: 300px;
