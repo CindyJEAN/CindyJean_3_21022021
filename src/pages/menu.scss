@@ -28,19 +28,26 @@
         border-radius: 40px 40px 0 0;
 
         h2 {
-            display: flex;
+            display: block;
             text-transform: uppercase;
             font-weight: 300;
             font-size: 1rem;
     
-            &::before {
+            &::after {
                 content: "";
+                display: block;
                 width: 40px;
                 height: 3px;
                 background-color: $color-tertiary;
-                margin-right: -40px;
-                margin-top: 24px;
+                // margin-right: -40px;
+                margin-top: 5px;
             }
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
         }
     }
 

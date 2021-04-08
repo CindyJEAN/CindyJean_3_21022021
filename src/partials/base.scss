@@ -27,6 +27,7 @@ a {
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    max-width: 425px; //Travail sur la version mobile. A supprimer quand je travaillerai sur le responsive
 }
 
 .alignCenter { 
@@ -37,39 +38,36 @@ body {
     padding-left: 15px;
 }
 
-// .heart {
-//     display: inline-block;
-//     height: 30px;
-//     margin: 0 10px;
-//     position: relative;
-//     top: 0;
-//     transform: rotate(-45deg);
-//     width: 30px;
-
-//     &::before {
-//         top: -15px;
-//         left: 0;
-
-//         content: "";
-//         border-radius: 50%;
-//         height: 30px;
-//         position: absolute;
-//         width: 30px;
-//     }
-
-//     &::after {
-//         left: 15px;
-//         top: 0;
-
-//         content: "";
-//         border-radius: 50%;
-//         height: 30px;
-//         position: absolute;
-//         width: 30px;
-//     }
-// }
-
 ul {   
     list-style-type: none;
     padding-inline-start: 0;
 }
+
+article.restaurant i{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+    &:hover{
+        font-weight: bold;
+        background: -webkit-linear-gradient($color-primary, white);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-position-y: 7.5rem;
+        animation: remplissage 1s forwards;
+    }
+}
+
+
+@keyframes remplissage {
+    from {
+        background-position-y: 7.5rem;
+    }
+    to{
+        background-position-y: 5.5rem;
+    }
+    
+}
+

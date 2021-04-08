@@ -15,21 +15,30 @@
   <h1>La palette du goût</h1>
 
   <h2>Entrées</h2>
-    <ul>
+    
       <%- include('../partials/dish/dish.html', 
       {"plat" : "Fricassée d'escargot", 
-      "accompagnement" : "Au piment d'espelette"}); %>
-    </ul>
+      "accompagnement" : "Au piment d'espelette",
+      "prix" : "25 €"}); %>
+      <%- include('../partials/dish/dish.html', 
+      {"plat" : "Foie gras de canard mi-cuit", 
+      "accompagnement" : "Et ses copeaux de truffe noire",
+      "prix" : "35 €"}); %>
+      <%- include('../partials/dish/dish.html', 
+      {"plat" : "Oeuf au plat", 
+      "accompagnement" : "Assaisonné à la truffe sur lit de caviar",
+      "prix" : "20 €"}); %>
+    
     
   <h2>Plats</h2>
-    <ul>
-
-    </ul>
+    
+      
+    
 
   <h2>Desserts</h2>
-    <ul>
+    
 
-    </ul>
+    
   
   <%- include ('../partials/button/button.html', {"texte" : "Commander" }); %>
   
