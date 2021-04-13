@@ -4,12 +4,25 @@ article.dish {
     grid-template-areas: 
         "plat plat"
         "accompagnement prix";
-    grid-template-columns: auto 50px;
+    grid-template-columns: auto 70px;
     height: 70px;
     border-radius: 15px;
     box-shadow: 1px 5px 12px 0px rgba(0,0,0,.10);
     row-gap: 3px;
     margin-bottom: 15px;
+    
+    position: relative;
+    animation: landing 2s ease-in-out forwards;
+    
+    
+    @keyframes landing {
+        from {
+            bottom: -10px;
+        }
+        to{
+            bottom: 0;
+        }
+    }
 
     p {
         margin: 0;
@@ -19,19 +32,27 @@ article.dish {
             font-size: 1.1rem;
             align-self: flex-end;
             // padding-bottom: 5px;
+            
         }
 
         &:nth-of-type(2) {
             grid-area: accompagnement;
-            font-size: 1rem;
+            font-size: .9rem;
+            font-weight: 300;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-right: 5px;
         }
 
         &:nth-of-type(3) {
             grid-area: prix;
             justify-self: center;
+            // align-self: flex-end;
             font-weight: 700;
             color: $color-bgDark;
         }
+
     }
     
 }

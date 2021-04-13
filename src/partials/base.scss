@@ -21,6 +21,7 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     max-width: 425px; //Travail sur la version mobile. A supprimer quand je travaillerai sur le responsive
+    box-sizing: border-box;
 }
 
 .alignCenter { 
