@@ -11,16 +11,28 @@ article.dish {
     row-gap: 3px;
     margin-bottom: 15px;
     
-    position: relative;
-    animation: landing 2s ease-in-out forwards;
+    opacity: 0;
+    // position: relative;
+    // bottom: -20px;
+    animation: landing 1.5s ease-out forwards;
+    // animation: fadein 3s ease forwards;
     
+    $delay: 0s;
+
+    @for $i from 1 through 9 {
+        &:nth-of-type(#{$i}) {
+            animation-delay: calc(#{$delay} + .4s)
+        }
+    } 
     
     @keyframes landing {
         from {
-            bottom: -10px;
+            margin-top: 20px;
+            opacity: 0;
         }
         to{
-            bottom: 0;
+            margin-top: 0;
+            opacity: 1;
         }
     }
 

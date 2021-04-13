@@ -49,7 +49,7 @@ i.heart {
     &:hover {
         font-weight: bold;
         background: -webkit-linear-gradient($color-primary, $color-secondary 50%, white 60%);
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         background-position-y: 1.8rem;
         animation: gradient 1s ease forwards;
