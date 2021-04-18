@@ -13,9 +13,10 @@
     box-shadow: 0 5px 8px 0px rgba(0,0,0,.2);
     
     &:hover {
-        background: linear-gradient(170deg, lighten($color-secondary, 10%), lighten($color-primary, 10%));
-        box-shadow: 0 5px 8px 0px rgba(0,0,0,.6);
+        background: linear-gradient(170deg, lighten($color-secondary, 5%), lighten($color-primary, 5%));
+        box-shadow: 0 5px 8px 0px rgba(0,0,0,.4);
     }
+
     &:focus {
         outline: none;
     }

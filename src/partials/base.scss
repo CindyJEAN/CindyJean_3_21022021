@@ -3,8 +3,10 @@ $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-bgLight: #f6f6f6;//Gris clair pour les sections
 $color-bgMedium: #eaeaea; //Gris foncé localisation
-$color-bgDark: #353535;//Gris du footer
+$color-bgDark: #353535;//Gris du footer  
+$landingDelay: 0.4s;
 $checkWidth: 60px;
+
 
 a {
     &:link {
@@ -23,19 +25,6 @@ body {
     font-family: 'Roboto', sans-serif;
     max-width: 425px; //Travail sur la version mobile. A supprimer quand je travaillerai sur le responsive
     box-sizing: border-box;
-}
-
-.alignCenter { 
-    text-align: center;
-}
-
-.leftPad {
-    padding-left: 15px;
-}
-
-ul {   
-    list-style-type: none;
-    padding-inline-start: 0;
 }
 
 i.heart {
@@ -57,6 +46,11 @@ i.heart {
     }
 }
 
+ul {   
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
 
 @keyframes gradient {
     from {
@@ -68,5 +62,24 @@ i.heart {
     
 }
 
+@keyframes landing {
+    from {
+        margin-top: 20px;
+        opacity: 0;
+    }
+    to{
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
+
+.alignCenter { 
+    text-align: center;
+}
+
+.leftPad {
+    padding-left: 15px;
+}
 
 

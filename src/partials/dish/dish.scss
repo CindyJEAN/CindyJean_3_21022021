@@ -13,25 +13,13 @@ article.dish {
     overflow: hidden;
 
     opacity: 0;
-    animation: landing 1.5s ease-out forwards;
-    
-    $delay: 0s;
+    animation: landing 2s ease-out forwards;
+        
     @for $i from 1 through 9 {
         &:nth-of-type(#{$i}) {
-            animation-delay: calc(#{$delay} + .4s)
+            animation-delay: calc(#{$landingDelay} + .4s)
         }
     } 
-    
-    @keyframes landing {
-        from {
-            margin-top: 20px;
-            opacity: 0;
-        }
-        to{
-            margin-top: 0;
-            opacity: 1;
-        }
-    }
 
     p {
         margin: 0;
@@ -64,6 +52,8 @@ article.dish {
 
     }
 
+    
+
     i.check {
         display: flex;
         color: white;
@@ -72,11 +62,38 @@ article.dish {
         grid-area: check;
         align-items: center;
         justify-content: center;
-        width: $checkWidth;
-        border-radius: 0 15px 15px 0;
-        
-
-        
+        border-radius: 0 15px 15px 0;   
+        transform: scaleX(0);
+        transform-origin: right;
     }
-    
+
+    &:hover {
+        & > .check {
+            animation: checking 2s ease-in-out both;  
+
+            &::before {
+                transform: rotate(0deg);
+                animation: rotate 2s ease-in-out forwards;
+            }
+        }
+
+    }  
+}
+
+@keyframes checking {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
