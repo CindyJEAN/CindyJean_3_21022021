@@ -1,19 +1,15 @@
+
 article.dish {
+    display:flex;
     background-color: #fff;
-    display: grid;
-    grid-template-areas: 
-        "plat plat check"
-        "accompagnement prix check";
-    grid-template-columns: auto 70px $checkWidth;
     height: 70px;
     border-radius: 15px;
     box-shadow: 1px 5px 12px 0px rgba(0,0,0,.10);
-    row-gap: 3px;
     margin-bottom: 15px;
     overflow: hidden;
 
     opacity: 0;
-    animation: landing 2s ease-out forwards;
+    animation: landing 2s cubic-bezier(0,.18,.73,.99) forwards;
         
     @for $i from 1 through 9 {
         &:nth-of-type(#{$i}) {
@@ -21,79 +17,106 @@ article.dish {
         }
     } 
 
-    p {
-        margin: 0;
-        &:first-of-type {
-            grid-area: plat;
-            font-weight: bold;
-            font-size: 1.1rem;
-            align-self: flex-end;
-            // padding-bottom: 5px;
-            
-        }
-
-        &:nth-of-type(2) {
-            grid-area: accompagnement;
-            font-size: .9rem;
-            font-weight: 300;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            margin-right: 5px;
-        }
-
-        &:nth-of-type(3) {
-            grid-area: prix;
-            justify-self: center;
-            // align-self: flex-end;
-            font-weight: 700;
-            color: $color-bgDark;
-        }
-
+    & > * {
+        transition: width $checkSpeed;
     }
 
+    main{
+        
+        display: grid;
+        grid-template-areas: 
+            "plat plat"
+            "accompagnement prix";
+        grid-template-columns: auto 70px;
+        row-gap: 3px;
+        width: 100%;
+        p {
+            margin: 0;
+            &:first-of-type {
+                grid-area: plat;
+                font-weight: bold;
+                font-size: 1.1rem;
+                align-self: flex-end;
+                
+            }
     
+            &:nth-of-type(2) {
+                grid-area: accompagnement;
+                font-size: .9rem;
+                font-weight: 300;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                margin-right: 5px;
+            }
+    
+            &:nth-of-type(3) {
+                grid-area: prix;
+                justify-self: center;
+                font-weight: 700;
+                color: $color-bgDark;
+            }
+    
+        }
+    }
 
-    i.check {
-        display: flex;
-        color: white;
+    aside {
+        width : 0;
         background-color: $color-tertiary;
-        font-size: 1.3rem;
-        grid-area: check;
-        align-items: center;
+        display: flex;
         justify-content: center;
-        border-radius: 0 15px 15px 0;   
-        transform: scaleX(0);
-        transform-origin: right;
+        align-items: center;
+        i {
+            display: flex;
+            color: white;
+            font-size: 1.3rem;
+            align-items: center;
+            justify-content: center;
+        }
     }
 
     &:hover {
-        & > .check {
-            animation: checking 2s ease-in-out both;  
-
-            &::before {
-                transform: rotate(0deg);
-                animation: rotate 2s ease-in-out forwards;
+        main{
+            width: calc(100% - #{$checkWidth});
+        }
+        aside {
+            width: $checkWidth;
+            i{
+                &::before {
+                    animation: rotate $checkSpeed ease-in-out forwards;
+                }
             }
+
         }
 
     }  
 }
 
+@keyframes landing {
+    from {
+        margin-top: 20px;
+        opacity: 0;
+    }
+    to{
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
 @keyframes checking {
     from {
-        transform: scaleX(0);
+        transform: translateX(60px);
     }
     to {
-        transform: scaleX(1);
+        transform: translateX(0px);
     }
 }
 
 @keyframes rotate {
     from {
-        transform: rotate(0deg);
+        transform: rotate(-180deg);
     }
     to {
-        transform: rotate(360deg);
+        transform: rotate(0deg);
     }
 }

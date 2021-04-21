@@ -61,7 +61,7 @@
                 color: #fff;
                 font-weight: 400;
                 font-size: .8rem;
-                z-index: 1;
+                // z-index: 1;
                 margin-left: -12px;
             }
 
@@ -77,24 +77,56 @@
                 color: grey;
                 font-size: 1.2rem;
                 margin: auto 25px auto 25px;
-            }
-            // &::before {
-            //     font-family: 'Font Awesome 5 Free';
-            //     font-weight: bold;
-            //     color: grey;
-            // }
-            // &:first-of-type::before {
-            //     content : "\f3cd";
-            // }
-            // &:nth-of-type(2)::before {
-            //     content : "\f03a";
-            // }
-            // &:nth-of-type(3)::before {
-            //     content : "\f54e";
-            // }    
+            }  
         }
     }
        
     
+
+}
+
+i.circle {
+    display: flex;
+    font-weight: normal;
+    font-size: 5rem;   
+    align-items: center;
+    justify-content: center;
+    background: conic-gradient($color-primary, $color-secondary, $color-tertiary, $color-primary);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: spinning 1.5s cubic-bezier(.52,.39,.59,.8) 2;
+    
+}
+
+@keyframes spinning {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+}
+
+aside.loader {
+    position: fixed;
+    width: $mx-width;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 255, 255, .70);
+    // z-index: 1;
+    animation: loader 3s both;
+}
+
+@keyframes loader {
+    0% {
+        height: 100%;
+    }
+    99% {
+        height: 100%;
+    }
+    100% {
+        height: 0%;
+    }
 
 }

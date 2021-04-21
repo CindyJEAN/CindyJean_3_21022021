@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <%- include('../partials/head/head.html', {"titre" : "accueil" }); %>
+  <%- include('../partials/head/head.html', {"titre" : "Accueil", 
+  "description" : `Réservez votre menu dans des restaurants d\'exception. Choisissez le restaurant, 
+  composez votre menu puis dégustez au restaurant, sans attendre.` }); %>
 </head>
 <body class="index">
+  <aside class="loader">
+    <i class="far fa-circle circle"></i>
+  </aside>
+
   <%- include('../partials/header/header.html', {"back" : false }); %>
 
   <main>

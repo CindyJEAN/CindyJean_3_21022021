@@ -4,8 +4,10 @@ $color-tertiary: #99E2D0;
 $color-bgLight: #f6f6f6;//Gris clair pour les sections
 $color-bgMedium: #eaeaea; //Gris foncé localisation
 $color-bgDark: #353535;//Gris du footer  
-$landingDelay: 0.4s;
+$landingDelay: 0.2s;
 $checkWidth: 60px;
+$mx-width: 425px;
+$checkSpeed : 0.5s;
 
 
 a {
@@ -23,7 +25,7 @@ a {
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    max-width: 425px; //Travail sur la version mobile. A supprimer quand je travaillerai sur le responsive
+    max-width: $mx-width; //Travail sur la version mobile. A supprimer quand je travaillerai sur le responsive
     box-sizing: border-box;
 }
 
@@ -62,16 +64,6 @@ ul {
     
 }
 
-@keyframes landing {
-    from {
-        margin-top: 20px;
-        opacity: 0;
-    }
-    to{
-        margin-top: 0;
-        opacity: 1;
-    }
-}
 
 
 .alignCenter { 
@@ -81,5 +73,6 @@ ul {
 .leftPad {
     padding-left: 15px;
 }
+
 
 
