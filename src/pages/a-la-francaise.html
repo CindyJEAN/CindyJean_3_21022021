@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <%- include('../partials/head/head.html', {"titre" : "À la française", 
+  "description" : "Réservez votre menu et venez déguster au restaurant À la française." }); %>
+</head>
+
+<body class="menu">
+  <%- include('../partials/header/header.html', {"back" : true }); %>
+  
+  <img class="hero" src="restaurants/a-la-francaise.jpg" alt="A la française"/>
+  
+  <section class="carte">
+
+  <h1>À la française<i class="fas fa-heart heart"></i></h1>
+  
+
+  <h2>Entrées</h2>
+    
+    <%- include('../partials/dish/dish.html', 
+    {"plat" : "Tartare de poulpe acidulé", 
+    "accompagnement" : "Aux zestes d'orange",
+    "prix" : "25"}); %>
+    <%- include('../partials/dish/dish.html', 
+    {"plat" : "Velouté de légumes d'antan", 
+    "accompagnement" : "Carotte, panais, topinambour",
+    "prix" : "35"}); %>
+    <%- include('../partials/dish/dish.html', 
+    {"plat" : "Soupe à l'oignon", 
+    "accompagnement" : "Revisitée",
+    "prix" : "20"}); %>
+      
+  <h2>Plats</h2>
+
+    <%- include('../partials/dish/dish.html', 
+    {"plat" : "Coquilles Saint-Jacques", 
+    "accompagnement" : "Accompagnées d'une purée de panais",
+    "prix" : "40"}); %>
+    <%- include('../partials/dish/dish.html', 
+    {"plat" : "Magret de canard", 
+    "accompagnement" : "Et parmentier de pommes de terre",
+    "prix" : "35"}); %>
+    <%- include('../partials/dish/dish.html', 
+    {"plat" : "Pigeonneau d’Ille-et-Vilaine", 
+    "accompagnement" : "Sur son lit de gnocchis aux légumes",
+    "prix" : "44"}); %>
+
+  <h2>Desserts</h2>
+
+    <%- include('../partials/dish/dish.html', 
+    {"plat" : "Pétales de violettes glacés", 
+    "accompagnement" : "Et purée de noisettes",
+    "prix" : "18"}); %>
+    <%- include('../partials/dish/dish.html', 
+    {"plat" : "Fondant au chocolat", 
+    "accompagnement" : "Revisité",
+    "prix" : "22"}); %>
+    <%- include('../partials/dish/dish.html', 
+    {"plat" : "Millefeuille croustillant", 
+    "accompagnement" : "Myrtilles et pâte d’amande",
+    "prix" : "23"}); %>
+
+    
+  
+  <%- include ('../partials/button/button.html', {"texte" : "Commander" }); %>
+  
+  </section>
+
+  <%- include('../partials/footer/footer.html'); %>
+</body>
+
+</html>

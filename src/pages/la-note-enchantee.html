@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <%- include('../partials/head/head.html', {"titre" : "La note enchantée", 
+  "description" : "Réservez votre menu et venez déguster au restaurant la note enchantée." }); %>
+</head>
+
+<body class="menu">
+  <%- include('../partials/header/header.html', {"back" : true }); %>
+  
+  <img class="hero" src="restaurants/la-note-enchantee.jpg" alt="La note enchantée"/>
+  
+  <section class="carte">
+
+  <h1>La note enchantée<i class="fas fa-heart heart"></i></h1>
+  
+
+  <h2>Entrées</h2>
+    
+    <%- include('../partials/dish/dish.html', 
+    {"plat" : "Ravioles de foie gras", 
+    "accompagnement" : "Accompagnés de leur crème à la truffe",
+    "prix" : "25"}); %>
+    <%- include('../partials/dish/dish.html', 
+    {"plat" : "Caviar osciètre", 
+    "accompagnement" : "Sur blini à la farine de blé noir",
+    "prix" : "35"}); %>
+    <%- include('../partials/dish/dish.html', 
+    {"plat" : "Homard et espuma de potiron", 
+    "accompagnement" : "Mariné aux zestes d'orange",
+    "prix" : "20"}); %>
+    <%- include('../partials/dish/dish.html', 
+    {"plat" : "Foie gras de canard cuit entier", 
+    "accompagnement" : "Confiture de figue et pain toasté",
+    "prix" : "35"}); %>
+      
+  <h2>Plats</h2>
+
+    <%- include('../partials/dish/dish.html', 
+    {"plat" : "Noix de coquilles Saint-Jacques", 
+    "accompagnement" : "Sur lit de purée de céleri-rave",
+    "prix" : "40"}); %>
+    <%- include('../partials/dish/dish.html', 
+    {"plat" : "Langoustine poêlée", 
+    "accompagnement" : "Purée de patate douce",
+    "prix" : "35"}); %>
+    <%- include('../partials/dish/dish.html', 
+    {"plat" : "Mijoté de queue de boeuf ", 
+    "accompagnement" : "Et riz sauvage aux zestes de citron",
+    "prix" : "44"}); %>
+
+  <h2>Desserts</h2>
+
+    <%- include('../partials/dish/dish.html', 
+    {"plat" : "Macaron noisette et chocolat", 
+    "accompagnement" : "Glace au caramel brun et sel de Guérande",
+    "prix" : "18"}); %>
+    <%- include('../partials/dish/dish.html', 
+    {"plat" : "Baba au rhum revisité", 
+    "accompagnement" : "Avec son coulis de citron",
+    "prix" : "22"}); %>
+    <%- include('../partials/dish/dish.html', 
+    {"plat" : "Tarte au citron meringuée", 
+    "accompagnement" : "Déstructurée",
+    "prix" : "23"}); %>
+
+    
+  
+  <%- include ('../partials/button/button.html', {"texte" : "Commander" }); %>
+  
+  </section>
+
+  <%- include('../partials/footer/footer.html'); %>
+</body>
+
+</html>

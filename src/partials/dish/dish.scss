@@ -11,7 +11,7 @@ article.dish {
     opacity: 0;
     animation: landing 2s cubic-bezier(0,.18,.73,.99) forwards;
         
-    @for $i from 1 through 9 {
+    @for $i from 1 through 10 {
         &:nth-of-type(#{$i}) {
             animation-delay: calc(#{$landingDelay} + .4s)
         }

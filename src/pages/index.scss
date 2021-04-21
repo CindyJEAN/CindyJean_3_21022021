@@ -94,7 +94,7 @@ i.circle {
     background: conic-gradient($color-primary, $color-secondary, $color-tertiary, $color-primary);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: spinning 1.5s cubic-bezier(.52,.39,.59,.8) 2;
+    animation: spinning calc(#{$loaderSpeed} / 2) cubic-bezier(.52,.39,.59,.8) 2;
     
 }
 
@@ -115,7 +115,7 @@ aside.loader {
     justify-content: center;
     background: rgba(255, 255, 255, .70);
     // z-index: 1;
-    animation: loader 3s both;
+    animation: loader $loaderSpeed both;
 }
 
 @keyframes loader {
