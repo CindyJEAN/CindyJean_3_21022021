@@ -1,88 +1,145 @@
 .index {
     main {
+        display: flex;
+        flex-wrap: wrap;
+        
+        @include tablet {
+            max-width: 1024px;
+            margin: 0 auto;
+        }
+
         p {
             font-size: 1.2rem;
             font-weight: 300;
-            margin: 0;
-        }    
-    }
-    
-    section {
-        display: flex;
-        flex-direction: column;
-        row-gap: 15px;
-        margin: auto;
-        padding: 3rem 1.5rem;
-    
-        &.bg-grey {
-            background-color: $color-bgLight;
-        }
-    
-        &.fonctionnement {
-            row-gap: 20px;
-        }
-        
-        h1 {
-            margin: 0;
-        }
-        
-        ul {
+            margin: 0; 
+            width: 90%; 
+        }      
+
+        section {
             display: flex;
             flex-direction: column;
             row-gap: 15px;
-            list-style-position: inside;
-        }
+            padding: 3rem 0;
+            width: 100vw;
         
-        li {
-            background-color: $color-bgLight;
-            box-shadow: 1px 5px 12px 0px rgba(0,0,0,.15);
-            border-radius: 20px;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            font-weight: 500;
-            margin-bottom: 10px;
-            margin-left: 12px;
-    
-            @for $i from 1 through 3{
-                &:nth-of-type(#{$i})::before{
-                    content: "#{$i}";
-                }
+            &.bg-grey {
+                background-color: $color-bgLight;
             }
-    
-            &::before {
-                background-color: $color-primary;
-                border-radius: 50%;
-                display: flex;
-                justify-content: center;
+
+            &:first-of-type {
                 align-items: center;
-                width: 1.5rem;
-                height: 1.5rem;
-                color: #fff;
-                font-weight: 400;
-                font-size: .8rem;
-                // z-index: 1;
-                margin-left: -12px;
+                text-align: center;
             }
 
-            &:last-of-type {
-                background-color: lighten($color-primary, 35%);
-
-                i {
-                    color: $color-primary;
+            &:nth-of-type(2) {
+                h1 {
+                    padding-left: 5%;
                 }
             }
     
-            i {
-                color: grey;
-                font-size: 1.2rem;
-                margin: auto 25px auto 25px;
-            }  
-        }
-    }
-       
+            &:nth-of-type(3) {
+                h1 {   
+                    padding-left: 5%;
+                }
     
+                @include tablet {
+                    // width: 100vw;
+                    display: grid;
+                    grid-template-areas: 
+                        "title title"
+                        "article article"
+                        "article article";
+    
+                    h1 {
+                        grid-area: title;
+                        width: 100%;
+                        margin-bottom: 2rem;
+                        padding-left: 0;
+                    }
 
+                    background-color: #fff;
+                }
+            }
+    
+            @include tablet {   
+                align-items: center;
+            }
+    
+            @include tablet {
+                &:first-of-type, &:nth-of-type(2) {
+                    width: 50%;
+                    // height: 440px;
+                }
+            }
+            
+            h1 {
+                margin: 0;
+                width: 90%;
+    
+                @include tablet {
+                    text-align: center;
+                }
+            }
+            
+            ul {
+                display: flex;
+                flex-direction: column;
+                row-gap: 15px;
+                list-style-position: inside;
+                align-items: center;
+                width: 100%;
+            }
+            
+            li {
+                background-color: $color-bgLight;
+                box-shadow: 1px 5px 12px 0px rgba(0,0,0,.15);
+                border-radius: 20px;
+                height: 70px;
+                display: flex;
+                align-items: center;
+                font-weight: 500;
+                margin-bottom: 10px;
+                // margin-left: 12px;
+                max-width: 375px;
+                width: 90%;
+        
+                @for $i from 1 through 3{
+                    &:nth-of-type(#{$i})::before{
+                        content: "#{$i}";
+                    }
+                }
+        
+                &::before {
+                    background-color: $color-primary;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    color: #fff;
+                    font-weight: 400;
+                    font-size: .8rem;
+                    // z-index: 1;
+                    margin-left: -12px;
+                }
+    
+                &:last-of-type {
+                    background-color: lighten($color-primary, 35%);
+    
+                    i {
+                        color: $color-primary;
+                    }
+                }
+        
+                i {
+                    color: grey;
+                    font-size: 1.2rem;
+                    margin: auto 25px auto 25px;
+                }  
+            }
+        }
+    } 
 }
 
 i.circle {
@@ -94,8 +151,7 @@ i.circle {
     background: conic-gradient($color-primary, $color-secondary, $color-tertiary, $color-primary);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: spinning calc(#{$loaderSpeed} / 2) cubic-bezier(.52,.39,.59,.8) 2;
-    
+    animation: spinning calc(#{$loaderSpeed} / 2) cubic-bezier(.52,.39,.59,.8) 2;   
 }
 
 @keyframes spinning {
@@ -109,12 +165,11 @@ i.circle {
 
 aside.loader {
     position: fixed;
-    width: $mx-width;
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     background: rgba(255, 255, 255, .70);
-    // z-index: 1;
     animation: loader $loaderSpeed both;
 }
 

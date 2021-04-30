@@ -13,18 +13,23 @@ article.restaurant{
     align-items: center;
     height: 250px;
     box-shadow: 1px 5px 12px 0px rgba(0,0,0,.10);
+    max-width: 350px;
+    min-width: 275px;
+    margin: auto;
+    width: 90%;
+
+    @include tablet {
+        max-width: 330px;
+    }
     
 
     img {
         width: 100%;
-        max-width: 400px;
+        // max-width: 400px;
         height: 170px;
         object-fit: cover;
         object-position: 50% 60%;
-        // align-self: flex-start;
         border-radius: 15px 15px 0 0;
-        // padding-bottom: 10px;
-        // grid-area: photo;
         grid-column-start: photo;
         grid-column-end: nouveau;
         grid-row: 1 / 2;
@@ -38,7 +43,6 @@ article.restaurant{
     }
 
     address {
-        // padding-bottom: 15px;
         grid-area: adresse;
         font-style: normal;
         font-weight: 300;
@@ -64,9 +68,6 @@ article.restaurant{
         width: 80px;
         background-color: $color-tertiary;
         border-radius: 3px;
-        // padding: 1rem;
-        // top: -5rem;
-        // left: 13rem;
         grid-area: nouveau;
     }
 }

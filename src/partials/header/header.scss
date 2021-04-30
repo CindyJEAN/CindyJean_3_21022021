@@ -1,5 +1,11 @@
 header {      
     background-color:  $color-bgMedium;
+    width: 100vw;
+
+    // @include tablet {
+    //     max-width: 1024px;
+    //     margin: 0 auto;
+    // }
 
     nav {
         background-color: white;

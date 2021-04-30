@@ -2,6 +2,14 @@ footer{
   background-color: $color-bgDark;
   color: #fff;
   padding : 1.5rem;
+  width: calc(100vw - 3rem);
+
+  section {
+    @include tablet {
+      max-width: 1024px;
+      margin: auto;
+    }
+  }
   
   h2 {
     font-family: 'Shrikhand', cursive;
@@ -45,3 +53,4 @@ footer{
 
   
 }
+

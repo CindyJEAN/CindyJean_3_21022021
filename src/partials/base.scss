@@ -6,9 +6,23 @@ $color-bgMedium: #eaeaea; //Gris foncé localisation
 $color-bgDark: #353535;//Gris du footer  
 $landingDelay: 0.2s;
 $checkWidth: 60px;
-$mx-width: 425px;
+// $mx-width: 425px;
 $checkSpeed : 0.5s;
-$loaderSpeed: 1s;
+$loaderSpeed: 2s;
+
+$breakpoints: (
+    tablet: 768px,
+    desktop: 992px
+);
+
+@mixin tablet {
+    @media screen and (min-width: map-get($breakpoints, tablet)) {@content}
+};
+
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {@content}
+};
+
 
 
 
@@ -27,7 +41,8 @@ a {
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    max-width: $mx-width; //Travail sur la version mobile. A supprimer quand je travaillerai sur le responsive
+    width: 100vw;
+    // max-width: $mx-width; //Travail sur la version mobile. A supprimer quand je travaillerai sur le responsive
     box-sizing: border-box;
 }
 
@@ -70,6 +85,7 @@ ul {
 
 .alignCenter { 
     text-align: center;
+    padding-left: 0;
 }
 
 .leftPad {
