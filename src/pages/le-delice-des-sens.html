@@ -11,61 +11,64 @@
   
   <img class="hero" src="restaurants/le-delice-des-sens.jpg" alt="Le délice des sens"/>
   
-  <section class="carte">
+  <main class="carte">
 
-  <h1>Le délice des sens<i class="fas fa-heart heart"></i></h1>
-  
-
-  <h2>Entrées</h2>
+    <h1>Le délice des sens<i class="fas fa-heart heart"></i></h1>
     
-    <%- include('../partials/dish/dish.html', 
-    {"plat" : "Tartare de thon", 
-    "accompagnement" : "Assaisonné au yuzu",
-    "prix" : "25"}); %>
-    <%- include('../partials/dish/dish.html', 
-    {"plat" : "Bouchée de homard croustillant", 
-    "accompagnement" : "Et sa farandole de petits légumes",
-    "prix" : "35"}); %>
-    <%- include('../partials/dish/dish.html', 
-    {"plat" : "Velouté de cèpes", 
-    "accompagnement" : "Aux truffes",
-    "prix" : "20"}); %>
-      
-  <h2>Plats</h2>
+    <section>
+      <h2>Entrées</h2>
 
-    <%- include('../partials/dish/dish.html', 
-    {"plat" : "Poulet rôti aux herbes de Provence", 
-    "accompagnement" : "Et sa crème de truffe",
-    "prix" : "40"}); %>
-    <%- include('../partials/dish/dish.html', 
-    {"plat" : "Langouste rôtie", 
-    "accompagnement" : "Et ses légumes de saison",
-    "prix" : "35"}); %>
-    <%- include('../partials/dish/dish.html', 
-    {"plat" : "Côte de boeuf Angus", 
-    "accompagnement" : "Et sa purée de panais",
-    "prix" : "44"}); %>
+      <%- include('../partials/dish/dish.html', 
+      {"plat" : "Tartare de thon", 
+      "accompagnement" : "Assaisonné au yuzu",
+      "prix" : "25"}); %>
+      <%- include('../partials/dish/dish.html', 
+      {"plat" : "Bouchée de homard croustillant", 
+      "accompagnement" : "Et sa farandole de petits légumes",
+      "prix" : "35"}); %>
+      <%- include('../partials/dish/dish.html', 
+      {"plat" : "Velouté de cèpes", 
+      "accompagnement" : "Aux truffes",
+      "prix" : "20"}); %>
+    </section>
 
-  <h2>Desserts</h2>
+    <section>        
+      <h2>Plats</h2>
 
-    <%- include('../partials/dish/dish.html', 
-    {"plat" : "Farandole de desserts", 
-    "accompagnement" : "Du chef",
-    "prix" : "18"}); %>
-    <%- include('../partials/dish/dish.html', 
-    {"plat" : "Crème brulée", 
-    "accompagnement" : "Revisitée",
-    "prix" : "22"}); %>
-    <%- include('../partials/dish/dish.html', 
-    {"plat" : "Tiramisu", 
-    "accompagnement" : "À la noisette",
-    "prix" : "23"}); %>
+      <%- include('../partials/dish/dish.html', 
+      {"plat" : "Poulet rôti aux herbes de Provence", 
+      "accompagnement" : "Et sa crème de truffe",
+      "prix" : "40"}); %>
+      <%- include('../partials/dish/dish.html', 
+      {"plat" : "Langouste rôtie", 
+      "accompagnement" : "Et ses légumes de saison",
+      "prix" : "35"}); %>
+      <%- include('../partials/dish/dish.html', 
+      {"plat" : "Côte de boeuf Angus", 
+      "accompagnement" : "Et sa purée de panais",
+      "prix" : "44"}); %>
+    </section>
 
-    
+    <section>
+      <h2>Desserts</h2>
+
+      <%- include('../partials/dish/dish.html', 
+      {"plat" : "Farandole de desserts", 
+      "accompagnement" : "Du chef",
+      "prix" : "18"}); %>
+      <%- include('../partials/dish/dish.html', 
+      {"plat" : "Crème brulée", 
+      "accompagnement" : "Revisitée",
+      "prix" : "22"}); %>
+      <%- include('../partials/dish/dish.html', 
+      {"plat" : "Tiramisu", 
+      "accompagnement" : "À la noisette",
+      "prix" : "23"}); %>
+    </section>
+          
+    <%- include ('../partials/button/button.html', {"texte" : "Commander" }); %>
   
-  <%- include ('../partials/button/button.html', {"texte" : "Commander" }); %>
-  
-  </section>
+  </main>
 
   <%- include('../partials/footer/footer.html'); %>
 </body>

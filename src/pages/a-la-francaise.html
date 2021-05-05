@@ -11,12 +11,12 @@
   
   <img class="hero" src="restaurants/a-la-francaise.jpg" alt="A la française"/>
   
-  <section class="carte">
+  <main class="carte">
 
   <h1>À la française<i class="fas fa-heart heart"></i></h1>
   
-
-  <h2>Entrées</h2>
+  <section>
+    <h2>Entrées</h2>
     
     <%- include('../partials/dish/dish.html', 
     {"plat" : "Tartare de poulpe acidulé", 
@@ -30,8 +30,10 @@
     {"plat" : "Soupe à l'oignon", 
     "accompagnement" : "Revisitée",
     "prix" : "20"}); %>
-      
-  <h2>Plats</h2>
+  </section>    
+    
+  <section>  
+    <h2>Plats</h2>
 
     <%- include('../partials/dish/dish.html', 
     {"plat" : "Coquilles Saint-Jacques", 
@@ -45,8 +47,10 @@
     {"plat" : "Pigeonneau d’Ille-et-Vilaine", 
     "accompagnement" : "Sur son lit de gnocchis aux légumes",
     "prix" : "44"}); %>
+  </section>
 
-  <h2>Desserts</h2>
+  <section>
+    <h2>Desserts</h2>
 
     <%- include('../partials/dish/dish.html', 
     {"plat" : "Pétales de violettes glacés", 
@@ -60,12 +64,12 @@
     {"plat" : "Millefeuille croustillant", 
     "accompagnement" : "Myrtilles et pâte d’amande",
     "prix" : "23"}); %>
-
+  </section>
     
   
   <%- include ('../partials/button/button.html', {"texte" : "Commander" }); %>
   
-  </section>
+  </main>
 
   <%- include('../partials/footer/footer.html'); %>
 </body>

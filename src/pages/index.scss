@@ -34,6 +34,10 @@
             &:nth-of-type(2) {
                 h1 {
                     padding-left: 5%;
+
+                    @include tablet {
+                        padding-left: 0;
+                    }
                 }
             }
     
@@ -142,14 +146,17 @@
     } 
 }
 
-i.circle {
+i.spinner {
     display: flex;
-    font-weight: normal;
-    font-size: 5rem;   
+    // width: 100px;
+    // height: 100px;
+    font-weight: bold;
+    font-size: 90px;
     align-items: center;
     justify-content: center;
-    background: conic-gradient($color-primary, $color-secondary, $color-tertiary, $color-primary);
-    background-clip: text;
+    background-image: linear-gradient(115deg, $color-primary 38%, $color-secondary 62%);
+    background-position-y: 50%;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: spinning calc(#{$loaderSpeed} / 2) cubic-bezier(.52,.39,.59,.8) 2;   
 }
@@ -183,5 +190,4 @@ aside.loader {
     100% {
         height: 0%;
     }
-
 }

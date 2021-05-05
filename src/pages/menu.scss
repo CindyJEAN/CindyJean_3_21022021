@@ -9,9 +9,10 @@
         margin: 0;
         display: flex;
         justify-content: space-between;
-    }
-
-    
+        align-self: center;
+        width: 90%;
+        max-width: 400px;
+    }   
 
     img.hero {
         height: 300px;
@@ -20,39 +21,58 @@
         object-fit: cover;
         object-position: 50% 60%;
         z-index: 1;
+        margin: auto;
+
+        @include tablet {
+            max-width: 1020px;
+            height: 400px;
+        }
     }
 
-    section.carte {
-        padding: 2rem 1rem;
+    main.carte {
+        padding: 2rem 0;
         display: flex;     
         flex-direction: column;   
+        align-items: center;
         z-index: 900;
         background-color: $color-bgLight;
-        margin-top: -80px;
+        margin: -80px auto 0 auto;
         border-radius: 40px 40px 0 0;
+        width: 100%;
 
-        h2 {
-            display: block;
-            text-transform: uppercase;
-            font-weight: 300;
-            font-size: 1rem;
-            margin-top: 20px;
-    
-            &::after {
-                content: "";
+        @include tablet {
+            max-width: 1024px;
+        }
+
+        section {
+            width: 90%;
+            margin-bottom: 1rem;
+
+            h2 {
                 display: block;
-                width: 40px;
-                height: 3px;
-                background-color: $color-tertiary;
-                margin-top: 5px;
+                text-transform: uppercase;
+                font-weight: 300;
+                font-size: 1rem;
+                margin-top: 20px;
+                width: 90%;
+
+                @include tablet {
+                    align-self: flex-start;
+                }
+        
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 40px;
+                    height: 3px;
+                    background-color: $color-tertiary;
+                    margin-top: 5px;
+                }
             }
+            
         }
 
-        ul {
-            display: flex;
-            flex-direction: column;
-            row-gap: 15px;
-        }
+        
     }
 
 }

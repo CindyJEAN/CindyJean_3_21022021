@@ -11,12 +11,12 @@
   
   <img class="hero" src="restaurants/la-note-enchantee.jpg" alt="La note enchantée"/>
   
-  <section class="carte">
+  <main class="carte">
 
   <h1>La note enchantée<i class="fas fa-heart heart"></i></h1>
   
-
-  <h2>Entrées</h2>
+  <section>
+    <h2>Entrées</h2>
     
     <%- include('../partials/dish/dish.html', 
     {"plat" : "Ravioles de foie gras", 
@@ -34,8 +34,10 @@
     {"plat" : "Foie gras de canard cuit entier", 
     "accompagnement" : "Confiture de figue et pain toasté",
     "prix" : "35"}); %>
-      
-  <h2>Plats</h2>
+  </section>
+
+  <section>      
+    <h2>Plats</h2>
 
     <%- include('../partials/dish/dish.html', 
     {"plat" : "Noix de coquilles Saint-Jacques", 
@@ -49,8 +51,10 @@
     {"plat" : "Mijoté de queue de boeuf ", 
     "accompagnement" : "Et riz sauvage aux zestes de citron",
     "prix" : "44"}); %>
+  </section>
 
-  <h2>Desserts</h2>
+  <section>
+    <h2>Desserts</h2>
 
     <%- include('../partials/dish/dish.html', 
     {"plat" : "Macaron noisette et chocolat", 
@@ -64,12 +68,11 @@
     {"plat" : "Tarte au citron meringuée", 
     "accompagnement" : "Déstructurée",
     "prix" : "23"}); %>
-
-    
-  
+  </section>
+     
   <%- include ('../partials/button/button.html', {"texte" : "Commander" }); %>
   
-  </section>
+  </main>
 
   <%- include('../partials/footer/footer.html'); %>
 </body>

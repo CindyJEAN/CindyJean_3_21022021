@@ -1,12 +1,11 @@
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-tertiary: #99E2D0;
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
 $color-bgLight: #f6f6f6;//Gris clair pour les sections
 $color-bgMedium: #eaeaea; //Gris foncé localisation
 $color-bgDark: #353535;//Gris du footer  
-$landingDelay: 0.2s;
+$landingDelay: 0.4;
 $checkWidth: 60px;
-// $mx-width: 425px;
 $checkSpeed : 0.5s;
 $loaderSpeed: 2s;
 
@@ -22,9 +21,6 @@ $breakpoints: (
 @mixin desktop {
     @media screen and (min-width: map-get($breakpoints, desktop)) {@content}
 };
-
-
-
 
 a {
     &:link {
@@ -58,7 +54,7 @@ i.heart {
     &:hover {
         font-weight: bold;
         background: -webkit-linear-gradient($color-primary, $color-secondary 50%, white 60%);
-        background-clip: text;
+        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-position-y: 1.8rem;
         animation: gradient 1s ease forwards;
@@ -67,7 +63,7 @@ i.heart {
 
 ul {   
     list-style-type: none;
-    padding-inline-start: 0;
+    padding-left: 0;
 }
 
 
@@ -91,6 +87,4 @@ ul {
 .leftPad {
     padding-left: 15px;
 }
-
-
 

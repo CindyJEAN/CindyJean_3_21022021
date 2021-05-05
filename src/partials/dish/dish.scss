@@ -7,13 +7,18 @@ article.dish {
     box-shadow: 1px 5px 12px 0px rgba(0,0,0,.10);
     margin-bottom: 15px;
     overflow: hidden;
+    max-width: 500px;
+
+    @include tablet {
+        align-self: flex-start;
+    }
 
     opacity: 0;
-    animation: landing 2s cubic-bezier(0,.18,.73,.99) forwards;
+    animation: landing 2s cubic-bezier(0,.18,.73,.99) both;
         
-    @for $i from 1 through 10 {
+    @for $i from 1 through 4 {
         &:nth-of-type(#{$i}) {
-            animation-delay: calc(#{$landingDelay} + .4s)
+            animation-delay: #{$i * $landingDelay}s;
         }
     } 
 
@@ -21,8 +26,7 @@ article.dish {
         transition: width $checkSpeed;
     }
 
-    div{
-        
+    div{       
         display: grid;
         grid-template-areas: 
             "plat plat"
@@ -30,17 +34,18 @@ article.dish {
         grid-template-columns: auto 70px;
         row-gap: 3px;
         width: 100%;
-        p {
+
+        h3 {
             margin: 0;
+            grid-area: plat;
+            font-weight: bold;
+            font-size: 1.1rem;
+            align-self: flex-end;
+        }
+
+        p {
+            margin: 0;    
             &:first-of-type {
-                grid-area: plat;
-                font-weight: bold;
-                font-size: 1.1rem;
-                align-self: flex-end;
-                
-            }
-    
-            &:nth-of-type(2) {
                 grid-area: accompagnement;
                 font-size: .9rem;
                 font-weight: 300;
@@ -50,7 +55,7 @@ article.dish {
                 margin-right: 5px;
             }
     
-            &:nth-of-type(3) {
+            &:nth-of-type(2) {
                 grid-area: prix;
                 justify-self: center;
                 font-weight: 700;
