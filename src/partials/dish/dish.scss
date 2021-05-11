@@ -8,22 +8,17 @@ article.dish {
     margin-bottom: 15px;
     overflow: hidden;
     max-width: 500px;
-
-    @include tablet {
-        align-self: flex-start;
-    }
-
     opacity: 0;
     animation: landing 2s cubic-bezier(0,.18,.73,.99) both;
-        
-    @for $i from 1 through 4 {
+   
+    @for $i from 1 through 4 { //apparition des plats avec un délai
         &:nth-of-type(#{$i}) {
             animation-delay: #{$i * $landingDelay}s;
         }
     } 
 
-    & > * {
-        transition: width $checkSpeed;
+    @include tablet {
+        align-self: flex-start;
     }
 
     div{       
@@ -60,8 +55,7 @@ article.dish {
                 justify-self: center;
                 font-weight: 700;
                 color: $color-bgDark;
-            }
-    
+            }   
         }
     }
 
@@ -71,6 +65,7 @@ article.dish {
         display: flex;
         justify-content: center;
         align-items: center;
+        
         i {
             display: flex;
             color: white;
@@ -80,10 +75,11 @@ article.dish {
         }
     }
 
-    &:hover {
-        main{
-            width: calc(100% - #{$checkWidth});
-        }
+    & > * {
+        transition: width $checkSpeed;
+    }
+
+    &:hover { //transition sur la taille
         aside {
             width: $checkWidth;
             i{
@@ -91,13 +87,11 @@ article.dish {
                     animation: rotate $checkSpeed ease-in-out forwards;
                 }
             }
-
         }
-
     }  
 }
 
-@keyframes landing {
+@keyframes landing {// Apparition des plats depuis le bas
     from {
         margin-top: 20px;
         opacity: 0;
@@ -108,16 +102,7 @@ article.dish {
     }
 }
 
-@keyframes checking {
-    from {
-        transform: translateX(60px);
-    }
-    to {
-        transform: translateX(0px);
-    }
-}
-
-@keyframes rotate {
+@keyframes rotate {//clic/survol du plat --> rotation du check
     from {
         transform: rotate(-180deg);
     }

@@ -30,6 +30,7 @@ footer{
   li{
     font-size: 1rem;
     display: flex;
+
     &::before {
       font-family: 'Font Awesome 5 Free';
       font-weight: bold;
@@ -38,9 +39,11 @@ footer{
       display: flex;
       align-items: center;
     }
+
     &.food::before {
       content: "\f2e7";
     }
+
     &.hands::before {
       content: "\f4c4";
     }
@@ -50,7 +53,5 @@ footer{
   a:link {
     color: #fff;
   }
-
-  
 }
 

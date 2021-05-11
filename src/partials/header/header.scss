@@ -13,10 +13,6 @@ header {
         align-items: center;
         box-shadow: 0 2px 4px 0px rgba(0,0,0,.15);
 
-        img {
-            grid-area: logo;
-        }
-
         a{
             grid-area: arrow;
             &::before {
@@ -25,6 +21,10 @@ header {
                 font-weight: bold;
                 font-size: 1.3rem;
             }
+        }
+        
+        img {
+            grid-area: logo;
         }
     }
 

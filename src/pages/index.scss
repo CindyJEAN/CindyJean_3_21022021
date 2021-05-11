@@ -21,6 +21,10 @@
             row-gap: 15px;
             padding: 3rem 0;
             width: 100vw;
+
+            @include tablet {   
+                align-items: center;
+            }
         
             &.bg-grey {
                 background-color: $color-bgLight;
@@ -29,53 +33,49 @@
             &:first-of-type {
                 align-items: center;
                 text-align: center;
+
+                @include tablet {
+                    width: 50%;
+                    row-gap: 40px;
+                }
             }
 
             &:nth-of-type(2) {
+                @include tablet {
+                    width: 50%;
+                }
+
                 h1 {
                     padding-left: 5%;
 
                     @include tablet {
-                        padding-left: 0;
+                        padding-left: 0;                       
                     }
-                }
+                }               
             }
     
             &:nth-of-type(3) {
-                h1 {   
-                    padding-left: 5%;
-                }
-    
                 @include tablet {
-                    // width: 100vw;
                     display: grid;
                     grid-template-areas: 
                         "title title"
                         "article article"
                         "article article";
-    
-                    h1 {
+                    background-color: #fff;
+                }
+
+                h1 {   
+                    padding-left: 5%;
+
+                    @include tablet {
                         grid-area: title;
                         width: 100%;
                         margin-bottom: 2rem;
                         padding-left: 0;
                     }
-
-                    background-color: #fff;
-                }
+                }                
             }
-    
-            @include tablet {   
-                align-items: center;
-            }
-    
-            @include tablet {
-                &:first-of-type, &:nth-of-type(2) {
-                    width: 50%;
-                    // height: 440px;
-                }
-            }
-            
+        
             h1 {
                 margin: 0;
                 width: 90%;
@@ -103,7 +103,6 @@
                 align-items: center;
                 font-weight: 500;
                 margin-bottom: 10px;
-                // margin-left: 12px;
                 max-width: 375px;
                 width: 90%;
         
@@ -124,7 +123,6 @@
                     color: #fff;
                     font-weight: 400;
                     font-size: .8rem;
-                    // z-index: 1;
                     margin-left: -12px;
                 }
     
@@ -170,7 +168,7 @@ i.spinner {
     }
 }
 
-aside.loader {
+aside.loader {//fond du loader opaque
     position: fixed;
     width: 100%;
     height: 100%;
@@ -180,7 +178,7 @@ aside.loader {
     animation: loader $loaderSpeed both;
 }
 
-@keyframes loader {
+@keyframes loader {//fond du loader non visible après animation
     0% {
         height: 100%;
     }

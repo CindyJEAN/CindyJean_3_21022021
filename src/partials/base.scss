@@ -5,7 +5,7 @@ $color-bgLight: #f6f6f6;//Gris clair pour les sections
 $color-bgMedium: #eaeaea; //Gris foncé localisation
 $color-bgDark: #353535;//Gris du footer  
 $landingDelay: 0.4;
-$checkWidth: 60px;
+$checkWidth: 70px;
 $checkSpeed : 0.5s;
 $loaderSpeed: 2s;
 
@@ -18,9 +18,9 @@ $breakpoints: (
     @media screen and (min-width: map-get($breakpoints, tablet)) {@content}
 };
 
-@mixin desktop {
-    @media screen and (min-width: map-get($breakpoints, desktop)) {@content}
-};
+// @mixin desktop {
+//     @media screen and (min-width: map-get($breakpoints, desktop)) {@content}
+// };
 
 a {
     &:link {
@@ -38,7 +38,6 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     width: 100vw;
-    // max-width: $mx-width; //Travail sur la version mobile. A supprimer quand je travaillerai sur le responsive
     box-sizing: border-box;
 }
 
@@ -61,26 +60,17 @@ i.heart {
     }
 }
 
-ul {   
-    list-style-type: none;
-    padding-left: 0;
-}
-
-
-@keyframes gradient {
+@keyframes gradient { //hover icône heart
     from {
         background-position-y: 1.8rem;
     }
     to{
         background-position-y: 0.7rem;
-    }
-    
+    }  
 }
 
-
-
-.alignCenter { 
-    text-align: center;
+ul {   
+    list-style-type: none;
     padding-left: 0;
 }
 
