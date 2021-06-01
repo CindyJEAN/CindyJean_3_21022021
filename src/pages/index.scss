@@ -125,8 +125,8 @@
                     font-size: .8rem;
                     margin-left: -12px;
                 }
-    
-                &:last-of-type {
+
+                &:hover {
                     background-color: lighten($color-primary, 35%);
     
                     i {
@@ -168,7 +168,7 @@ i.spinner {
     }
 }
 
-aside.loader {//fond du loader opaque
+div.loader {//fond du loader opaque
     position: fixed;
     width: 100%;
     height: 100%;

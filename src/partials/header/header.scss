@@ -28,7 +28,7 @@ header {
         }
     }
 
-    p {
+    form {
         display: flex;
         margin: 0;
         height: 50px;
@@ -36,11 +36,24 @@ header {
         justify-content: center;
         font-weight: 500;
 
-        &::before {
-            font-family: 'Font Awesome 5 Free';
-            content: "\f3c5";
-            width: 1.5rem;
-            font-weight: bold;
+        label {
+            width: 1rem;
+        }
+
+        input[type=text] {
+            font-family: 'Roboto';
+            font-size: 1rem;
+            background-color: $color-bgMedium;
+            font-weight: 500;
+            border: none;
+            width: 120px;
+            padding-left: 10px;
+
+            &:focus {
+                background-color: $color-bgLight;
+                border-radius: 10px;
+                outline: none;
+            }
         }
     }
 }
